@@ -1,0 +1,43 @@
+#Card-4{
+
+    transition: all 0.2s ease-in-out;
+}
+
+#Card-4:hover{
+
+    background-color: rgba(0, 150, 200, 1);
+    color: white;
+}
+
+#Card-3{
+
+    transition: all 0.2s ease-in-out;
+}
+
+#Card-3:hover{
+
+    background-color: rgba(192, 80, 77, 1);
+    color: white;
+}
+
+#Card-2{
+
+    transition: all 0.2s ease-in-out;
+}
+
+#Card-2:hover{
+
+    background-color: rgba(119, 147, 60, 1);
+    color: white;
+}
+
+#Card-1{
+
+    transition: all 0.2s ease-in-out;
+}
+
+#Card-1:hover{
+
+    background-color: rgba(128, 100, 162, 1);
+    color: white;
+}

@@ -100,13 +100,13 @@ function Footer() {
                         <h4 className='fw-bold' style={{fontSize:'18px'}}>Invite Friends</h4>
                         <div className='position-relative'>
 
-                        <input className="p-2 rounded mt-3" type="search" placeholder="Email ID" aria-label="Search" style={{border:'1px solid rgba(128, 100, 162, 1)', width:'360px'}} />
+                            <input className="p-2 rounded mt-3" type="search" placeholder="Email ID" aria-label="Search" style={{border:'1px solid rgba(128, 100, 162, 1)', width:'360px'}} />
                     
-                        <div className='rounded-end position-absolute text-center p-2' style={{width:'65px',height:'40px',backgroundColor:'rgba(128, 100, 162, 1)', bottom:'1px', right:'0px', color:'white'}}>
-                            <p className='mb-0'>
-                            Invite
-                            </p>
-                        </div>
+                            <div className='rounded-end position-absolute text-center p-2' style={{width:'65px',height:'40px',backgroundColor:'rgba(128, 100, 162, 1)', bottom:'1px', right:'0px', color:'white'}}>
+                                <p className='mb-0'>
+                                    Invite
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
