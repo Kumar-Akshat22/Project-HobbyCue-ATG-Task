@@ -8,23 +8,30 @@ import { FaBell } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { IoSearch } from "react-icons/io5";
-
+import { useParams, useLocation } from 'react-router-dom';
+import Profile from './Profile';
+import './NavBar.css'
+import { RxHamburgerMenu } from "react-icons/rx";
 function NavBar() {
+
+    const location = useLocation();
+    const lastElement = location.pathname.split("/").pop();
+    console.log(lastElement)
     return (
-        <nav className="navbar-expand-lg w-100 shadow-sm p-2 rounded" style={{background:'#FFFFFF', minWidth:'1440px'}}>
+        <nav className="navbar-expand-lg w-100 shadow-sm p-2 rounded" style={{background:'#FFFFFF', minWidth:'1440px'}} id='navbar'>
             
-                <div className='d-flex align-items-center justify-content-center column-gap-2'>
+                <div className='d-flex align-items-center justify-content-evenly' id='navContainer'>
                     <div>
                         <a className="navbar-brand" href="/">
-                            <img src={logo} width="293.26px" height="60px" />
+                            <img src={logo} width="293.26px" height="60px" id='Logo'/>
                         </a>
                     </div>
 
-                    <div style={{width:'300px'}}>
-                        <div className='position-relative'>
+                    <div style={{width:'300px'}} >
+                        <div className='position-relative' id='searchNav'>
                             <input className="p-2 border border-1 rounded w-100" type="search" placeholder="Search here..." aria-label="Search" />
                         
-                            <div className='rounded-end position-absolute text-center p-2' style={{width:'65px',height:'40px',backgroundColor:'rgba(128, 100, 162, 1)', bottom:'0px', right:'0px', color:'white'}}>
+                            <div className='rounded-end position-absolute text-center p-2' style={{width:'65px',height:'40px',backgroundColor:'rgba(128, 100, 162, 1)', bottom:'1px', right:'0px', color:'white'}}>
                             
                                 <IoSearch />
                         
@@ -32,7 +39,7 @@ function NavBar() {
                         </div>
                     </div>
 
-                    <div className='mx-4 d-flex align-items-center jusitfy-content-between column-gap-3'>
+                    <div className='mx-4 d-flex align-items-center jusitfy-content-between column-gap-3' id='dropdowns'>
                         {/* Explore */}
                         <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
                             <ul className="navbar-nav">
@@ -83,29 +90,52 @@ function NavBar() {
                         <div className='d-flex column-gap-3'>
                         
                             {/* BookMark */}
-                            <div className='btn'>
+                            <div className='btn navIcons'>
                                 <FaBookmark size={16} color='#8064A2'/>
                             </div>
 
                             {/* Notification */}
-                            <div className='btn'>
+                            <div className='btn navIcons'>
                             <FaBell size={16} color='#8064A2'/>
 
                             </div>
 
                             {/* Cart */}
-                            <div className='btn'>
+                            <div className='btn navIcons'>
                             <FaShoppingCart size={16} color='#8064A2'/>
 
+                            </div>
+
+                            {/* Search Icon */}
+                            <div className='d-lg-none navIconMobile'>
+                            <IoSearch />
+
+                            </div>
+
+                            {/* Hamburger */}
+                            <div className='d-lg-none navIconMobile'>
+                                <RxHamburgerMenu />
+                            </div>
+
+                            {/* Bell */}
+                            <div className='d-lg-none navIconMobile'>
+                            <FaBell />
                             </div>
                         </div>
 
                         {/* Sign In Button */}
-                        <Link to='/dashboard' >
-                            <div>
-                                <button className='btn rounded p-2' style={{border:'1px solid #8064A2', color:'#8064A2'}}>
+                        <Link to='/dashboard'>
+                            <div className=''>
+
+                            {lastElement === '' 
+                            ? 
+                                <button className='btn rounded p-2' style={{border:'1px solid #8064A2',color:'#8064A2'}}>
                                     Sign In
                                 </button>
+                            : 
+                                <Profile />
+                            }
+                                
                             </div>
                         </Link>
                     </div>

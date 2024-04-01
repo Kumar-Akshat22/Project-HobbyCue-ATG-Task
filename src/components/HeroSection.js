@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 import HeroLeft from '../assets/HeroLeft.svg'
 import HeroRight from '../assets/HeroRight.svg'
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from 'react-icons/fa6';
+import { AiOutlineEye , AiOutlineEyeInvisible } from "react-icons/ai"
+import SignIn from './SignIn';
+import './HeroSection.css';
+import JoinIn from './JoinIn';
 
 function HeroSection() {
 
-    const [mode, setMode] = useState('Sign In');
+    const [mode, setModde] = useState('signIn');
 
     return (
         <section className='w-100 p-5' style={{ backgroundColor: '#F7F5F9', minWidth: '1440px' }}>
-            <div className="d-flex justify-content-evenly align-items-center gap-3">
+            <div className="d-flex flex-column align-items-center flex-md-row justify-content-evenly gap-3">
 
                 {/* Left Div */}
                 <div className='d-flex flex-column row-gap-5 position-relative' style={{ width: '707px' }}>
@@ -30,7 +36,7 @@ function HeroSection() {
                     </div>
 
                     {/* Vector Graphics */}
-                    <div className='d-flex'>
+                    <div className='d-flex mt-3'>
 
                         {/* Left */}
                         <div>
@@ -46,24 +52,54 @@ function HeroSection() {
                 </div>
 
                 {/* Right Div */}
-                <div style={{ width: '410px' }}>
+                <div className="d-flex flex-column" style={{ width: '430px' }}>
                     
-                    <div>
+                    <div className='d-flex gap-3'>
+                        <div>
+                            <p style={{cursor:'pointer'}} className={mode==='signIn' ? 'active' : 'Tab'} onClick={()=>{setModde('signIn')}}>Sign In</p>
+                        </div>
 
-                    <ul className="" style={{textDecoration:'none'}}>
-                        <li className="">
-                            Sign In
-                        </li>
-                        <li className="">
-                            Join In
-                        </li>
-                        
-                    </ul>
+                        <div>
+                            <p style={{cursor:'pointer'}} className={mode==='joinIn' ? 'active' : 'Tab'} onClick={()=>{setModde('joinIn')}}>Join In</p>
+                        </div>
                     </div>
 
-                    <div>
+                    <div className='d-flex flex-column gap-4 w-100 mt-3'>
                         
+                        <button className='btn d-flex gap-5 align-items-center rounded py-2' style={{border:'1px solid rgba(128, 100, 162, 1)'}}>
+                            <FcGoogle />
+                            <p className='mb-0'>Continue with Google</p>
+                        </button>
+                        
+                        <button className='btn d-flex gap-5 align-items-center rounded py-2' style={{border:'1px solid rgba(128, 100, 162, 1)'}}>
+                            <FaFacebook color='rgba(24, 119, 242, 1)'/>
+                            <p className='mb-0'>Continue with Facebook</p>
+                        </button>
+                        
+                        <div className='d-flex flex-row align-items-center gap-1'>
+                            
+                            <div className='' style={{width:'149px', height:'2px' ,backgroundColor:'rgba(206, 212, 218, 1)'}}></div>
+
+                            <p className='mb-0 fw-bold mx-2' style={{fontSize:'12px'}}>Or connect with</p>
+
+                            <div lassName='' style={{width:'149px', height:'2px' ,backgroundColor:'rgba(206, 212, 218, 1)'}}></div>
+                        </div>
+
+                        {/* Input Fields */}
+                        <div className='d-flex flex-column gap-4'>
+
+                            <input required type='email' placeholder='Email' className='form-control p-2' style={{fontSize:'14px'}}></input>
+
+                            <div className='position-relative'>
+                                <input required type='password' placeholder='Password' className='form-control p-2' style={{fontSize:'14px'}}></input>
+
+                                <AiOutlineEye className='position-absolute' style={{right:'15px' , bottom:'10px', cursor:'pointer'}} size={18}/>
+                            </div>
+                        </div>
+
                     </div>
+
+                    {mode === 'signIn' ? <SignIn /> : <JoinIn />}
 
                 </div>
 

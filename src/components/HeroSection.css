@@ -1,0 +1,14 @@
+.active{
+
+    color: rgba(128, 100, 162, 1);
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.Tab{
+
+    color: rgba(147, 156, 163, 1);
+    font-size: 20px;
+    font-weight: 600;
+}

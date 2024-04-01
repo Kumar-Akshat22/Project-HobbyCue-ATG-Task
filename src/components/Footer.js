@@ -9,10 +9,10 @@ import Telegram from '../assets/Telegram.svg'
 import Mail from '../assets/Mail.svg'
 function Footer() {
     return (
-        <div>
+       
 
         
-        <footer className='w-100 mt-5 d-flex justify-content-center align-items-center p-5' style={{ minWidth: '1440px' }}>
+        <footer className='w-100 mt-5 d-flex flex-column justify-content-center align-items-center p-0' style={{ minWidth: '1440px' }}>
             <div className="d-flex justify-content-between p-5" style={{ width: '1240px', gap: '2rem' }}>
 
                 <div className='d-flex flex-column gap-3'>
@@ -66,30 +66,30 @@ function Footer() {
                     <div>
                         <h4 className='fw-bold' style={{fontSize:'18px'}}>Social Media</h4>
                         <div className='d-flex gap-4 mt-4'>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Facebook}></img>
                             </div>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Twitter}></img>
                             </div>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Instagram}></img>
 
                             </div>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Pinterest}></img>
 
                             </div>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Google}></img>
                             </div>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Youtube}></img>
                             </div>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Telegram}></img>
                             </div>
-                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0'}}>
+                            <div className='d-flex align-items-center justify-content-center rounded-circle' style={{width:'24px', height:'24px', backgroundColor:'#EBEDF0', cursor:'pointer'}}>
                                 <img src={Mail}></img>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ function Footer() {
 
                             <input className="p-2 rounded mt-3" type="search" placeholder="Email ID" aria-label="Search" style={{border:'1px solid rgba(128, 100, 162, 1)', width:'360px'}} />
                     
-                            <div className='rounded-end position-absolute text-center p-2' style={{width:'65px',height:'40px',backgroundColor:'rgba(128, 100, 162, 1)', bottom:'1px', right:'0px', color:'white'}}>
+                            <div className='rounded-end position-absolute text-center p-2 mb-0' style={{width:'65px',height:'40px',backgroundColor:'rgba(128, 100, 162, 1)', bottom:'0px', right:'0px', color:'white', cursor:'pointer'}}>
                                 <p className='mb-0'>
                                     Invite
                                 </p>
@@ -113,13 +113,13 @@ function Footer() {
 
             </div>
 
-            
+            <div className='w-100 p-3 d-flex align-items-center justify-content-center' style={{backgroundColor:'rgba(247, 245, 249, 1)'}}>
+                <p className='mb-0' style={{fontWeight:'600', fontSize:'19px'}}>© Purple Cues Private Limited</p>
+            </div>
         </footer>
 
-        <div className='w-100 p-4 d-flex align-items-center justify-content-center' style={{backgroundColor:'rgba(247, 245, 249, 1)'}}>
-            <p className='mb-0' style={{fontWeight:'600', fontSize:'19px'}}>© Purple Cues Private Limited</p>
-        </div>
-    </div>
+        
+    
     )
 }
 
